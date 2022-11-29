@@ -1,0 +1,52 @@
+ID,processor_brand,processor_name,processor_gnrtn
+0,Intel,Celeron Dual,Missing
+1,Intel,Core i3,10th
+3,Intel,Core i3,11th
+4,Intel,Core i5,11th
+6,AMD,Ryzen 3,Missing
+12,AMD,Ryzen 5,Missing
+19,Apple,M1 Processor,Missing
+20,Intel,Pentium Silver,Missing
+21,Intel,i5,Missing
+22,Intel,Core i7,10th
+27,Intel,Hexa Core,Missing
+29,Intel,Core i5,10th
+52,AMD,,Missing
+64,AMD,Ryzen 7,Missing
+75,Intel,Core i7,11th
+98,Intel,i7,Missing
+104,Intel,Pentium Quad,Missing
+116,AMD,5,Missing
+128,AMD,Ryzen 9,Missing
+200,Intel,Core i9,11th
+212,AMD,APU Dual,Missing
+213,AMD,Quad,Missing
+218,Apple,M1 Pro,Missing
+221,Intel,Core i5,9th
+229,Apple,M1 Max,Missing
+285,Intel,Core,Missing
+288,MediaTek,MediaTek Kompanio,Missing
+345,NVIDIA,GeForce GTX,Missing
+355,AMD,A6-9225 Processor,Missing
+372,NVIDIA,GeForce RTX,Missing
+385,Qualcomm,Snapdragon 7c,Missing
+408,Intel,Ryzen 7,Missing
+420,Intel,Core i5,8th
+436,AMD,Dual Core,Missing
+442,Pre-installed,Genuine Windows,Missing
+460,Intel,Core i5,7th
+466,Intel,Core i7,12th
+469,Intel,Core i9,12th
+471,Intel,Core i7,8th
+494,NVIDIA,GEFORCE RTX,Missing
+526,Intel,Core i9,10th
+612,Intel,Core i5,4th
+643,Intel,Core i7,9th
+682,First,Ever Screenpad,Missing
+710,512,GB SSD,Missing
+731,AMD,Athlon Dual,Missing
+807,Intel,Core i3,7th
+820,M.2,Slot for,Missing
+845,Intel,Core i3,8th
+846,64,GB eMMC,Missing
+858,Intel,Core m3,7th
