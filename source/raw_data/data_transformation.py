@@ -2,6 +2,10 @@ import pandas as pd
 
 # Read the .csv to a dataframe
 df = pd.read_csv('Cleaned_Laptop_data.csv')
+df = df.dropna()
+
+regex='^[0-9]*$'
+df= df[df.ram_gb.str.match(regex)]
 
 # Make a new ID column
 df['ID'] = df.index
@@ -70,6 +74,7 @@ df = df.drop(columns=[
   'latest_price',
   'discount',
   'old_price'])
+
 
 # Visualize the mods
 print(df.head())

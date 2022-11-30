@@ -6,7 +6,7 @@
 
 <#LaptopMap> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "processed_data/laptop_data.csv" ;
+    rml:source "processed_data/cropped10_data.csv" ;
     rml:referenceFormulation ql:CSV
   ];
   
@@ -59,7 +59,7 @@
     rr:predicate wd:Q11423;
     rr:objectMap [
       rml:reference "weight";
-      rr:datatype xsd:int
+      rr:datatype xsd:string
       ]
     ];
 
@@ -75,7 +75,7 @@
     rr:predicate wd:Q329717;
     rr:objectMap [
       rml:reference "warranty";
-      rr:datatype xsd:boolean
+      rr:datatype xsd:int
       ]
     ];
 
@@ -83,7 +83,7 @@
     rr:predicate wd:Q165970;
     rr:objectMap [
       rml:reference "Touchscreen";
-      rr:datatype xsd:boolean
+      rr:datatype xsd:string
       ]
     ];
 
@@ -91,7 +91,7 @@
     rr:predicate wd:Q11255;
     rr:objectMap [
       rml:reference "msoffice";
-      rr:datatype xsd:boolean
+      rr:datatype xsd:string
       ]
     ];
 
@@ -152,7 +152,7 @@
 
 <#CPUMap> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "processed_data/cpu.csv" ;
+    rml:source "raw_data/cpu.csv" ;
     rml:referenceFormulation ql:CSV
   ];
   
@@ -187,7 +187,7 @@
 
 <#OSMap> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "processed_data/os.csv" ;
+    rml:source "raw_data/os.csv" ;
     rml:referenceFormulation ql:CSV
   ];
   
@@ -214,7 +214,7 @@
 
 <#PriceMap> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "processed_data/price.csv" ;
+    rml:source "raw_data/price.csv" ;
     rml:referenceFormulation ql:CSV
   ];
   
@@ -241,7 +241,7 @@
 
 <#RAMMap> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "processed_data/ram.csv" ;
+    rml:source "raw_data/ram.csv" ;
     rml:referenceFormulation ql:CSV
   ];
   
@@ -268,7 +268,7 @@
 
 <#ReviewMap> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "processed_data/review.csv" ;
+    rml:source "raw_data/review.csv" ;
     rml:referenceFormulation ql:CSV
   ];
   

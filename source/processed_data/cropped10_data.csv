@@ -1,0 +1,11 @@
+brand,model,ssd,hdd,graphic_card_gb,weight,display_size,warranty,Touchscreen,msoffice,ID,cpu,ram,os_type,review,price
+ASUS,Celeron,0,1024,0,Casual,15.6,1,No,No,0,0,0,0,0,0
+ASUS,VivoBook,512,0,0,Casual,15.6,1,No,No,1,1,1,0,1,1
+ASUS,Vivobook,0,1024,0,Casual,14.1,1,No,No,2,1,1,0,2,2
+HP,Core,512,0,0,ThinNlight,15.6,1,No,Yes,3,3,1,0,3,3
+HP,Core,512,0,0,ThinNlight,15.6,0,No,No,4,4,1,0,4,4
+Lenovo,IdeaPad,0,1024,0,ThinNlight,15.6,1,No,Yes,5,1,1,5,5,5
+HP,15s,256,1024,0,Casual,15.6,1,No,Yes,6,6,1,6,6,6
+ASUS,Core,256,0,0,ThinNlight,14,0,No,No,7,3,0,7,7,7
+DELL,Vostro,256,1024,0,ThinNlight,15.6,1,No,Yes,8,1,1,8,8,8
+Lenovo,IdeaPad,256,0,0,ThinNlight,15.6,2,No,Yes,9,1,1,9,9,1
