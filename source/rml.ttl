@@ -1,0 +1,302 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix wd: <http://www.wikidata.org/entity/>.
+@base <http://example.com/ns#>.
+
+<#LaptopMap> a rr:TriplesMap;
+  rml:logicalSource [
+    rml:source "laptop_data.csv" ;
+    rml:referenceFormulation ql:CSV
+  ];
+  
+  rr:subjectMap [
+    rr:template "http://computer.example.com/{ID}";
+    rr:class wd:Q68
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q431289;
+    rr:objectMap [
+      rml:reference "brand";
+      rr:datatype xsd:string
+      ]
+    ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q10929058;
+    rr:objectMap [
+      rml:reference "model";
+      rr:datatype xsd:string
+      ]
+    ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q487343;
+    rr:objectMap [
+      rml:reference "ssd";
+      rr:datatype xsd:int
+      ]
+    ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q4439;
+    rr:objectMap [
+      rml:reference "hdd";
+      rr:datatype xsd:int
+      ]
+    ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q183484;
+    rr:objectMap [
+      rml:reference "graphic_card_gb";
+      rr:datatype xsd:int
+      ]
+    ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q11423;
+    rr:objectMap [
+      rml:reference "weight";
+      rr:datatype xsd:int
+      ]
+    ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q861066;
+    rr:objectMap [
+      rml:reference "display_size";
+      rr:datatype xsd:float
+      ]
+    ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q329717;
+    rr:objectMap [
+      rml:reference "warranty";
+      rr:datatype xsd:boolean
+      ]
+    ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q165970;
+    rr:objectMap [
+      rml:reference "Touchscreen";
+      rr:datatype xsd:boolean
+      ]
+    ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q11255;
+    rr:objectMap [
+      rml:reference "msoffice";
+      rr:datatype xsd:boolean
+      ]
+    ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q5300;
+    rr:objectMap [
+      rr:parentTriplesMap <#CPUMap>;
+      rr:joinCondition [
+        rr:child "cpu";
+        rr:parent "ID";
+        ];
+      ];
+    ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q9135;
+    rr:objectMap [
+      rr:parentTriplesMap <#OSMap>;
+      rr:joinCondition [
+        rr:child "os_type";
+        rr:parent "ID";
+        ];
+      ];
+    ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q80524;
+    rr:objectMap [
+      rr:parentTriplesMap <#PriceMap>;
+      rr:joinCondition [
+        rr:child "price";
+        rr:parent "ID";
+        ];
+      ];
+    ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q5295;
+    rr:objectMap [
+      rr:parentTriplesMap <#RAMMap>;
+      rr:joinCondition [
+        rr:child "ram";
+        rr:parent "ID";
+        ];
+      ];
+    ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q265158;
+    rr:objectMap [
+      rr:parentTriplesMap <#ReviewMap>;
+      rr:joinCondition [
+        rr:child "review";
+        rr:parent "ID";
+        ];
+      ];
+    ].
+
+<#CPUMap> a rr:TriplesMap;
+  rml:logicalSource [
+    rml:source "cpu.csv" ;
+    rml:referenceFormulation ql:CSV
+  ];
+  
+  rr:subjectMap [
+    rr:template "http://cpu.example.com/{ID}";
+    rr:class wd:Q5300
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q431289;
+    rr:objectMap [
+      rml:reference "processor_brand";
+      rr:datatype xsd:string
+      ]
+    ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q82799;
+    rr:objectMap [
+      rml:reference "processor_name";
+      rr:datatype xsd:string
+      ]
+    ];
+
+ rr:predicateObjectMap [
+    rr:predicate wd:Q20948857;
+    rr:objectMap [
+      rml:reference "processor_gnrtn";
+      rr:datatype xsd:string
+      ]
+    ].
+
+<#OSMap> a rr:TriplesMap;
+  rml:logicalSource [
+    rml:source "os.csv" ;
+    rml:referenceFormulation ql:CSV
+  ];
+  
+  rr:subjectMap [
+    rr:template "http://os.example.com/{ID}";
+    rr:class wd:Q9135
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q9135;
+    rr:objectMap [
+      rml:reference "os";
+      rr:datatype xsd:string
+      ]
+    ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q8805;
+    rr:objectMap [
+      rml:reference "os_bit";
+      rr:datatype xsd:int
+      ]
+    ].
+
+<#PriceMap> a rr:TriplesMap;
+  rml:logicalSource [
+    rml:source "price.csv" ;
+    rml:referenceFormulation ql:CSV
+  ];
+  
+  rr:subjectMap [
+    rr:template "http://price.example.com/{ID}";
+    rr:class wd:Q160151
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q4917;
+    rr:objectMap [
+      rml:reference "USD";
+      rr:datatype xsd:float
+      ]
+    ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q80524;
+    rr:objectMap [
+      rml:reference "INR";
+      rr:datatype xsd:float
+      ]
+    ].
+
+<#RAMMap> a rr:TriplesMap;
+  rml:logicalSource [
+    rml:source "ram.csv" ;
+    rml:referenceFormulation ql:CSV
+  ];
+  
+  rr:subjectMap [
+    rr:template "http://ram.example.com/{ID}";
+    rr:class wd:Q5295
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q79738;
+    rr:objectMap [
+      rml:reference "ram_gb";
+      rr:datatype xsd:int
+      ]
+    ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q21146257;
+    rr:objectMap [
+      rml:reference "ram_type";
+      rr:datatype xsd:string
+      ]
+    ].
+
+<#ReviewMap> a rr:TriplesMap;
+  rml:logicalSource [
+    rml:source "review.csv" ;
+    rml:referenceFormulation ql:CSV
+  ];
+  
+  rr:subjectMap [
+    rr:template "http://review.example.com/{ID}";
+    rr:class wd:Q265158
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q1642648;
+    rr:objectMap [
+      rml:reference "star_rating";
+      rr:datatype xsd:float
+      ]
+    ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q7295721;
+    rr:objectMap [
+      rml:reference "ratings";
+      rr:datatype xsd:int
+      ]
+    ];
+
+  rr:predicateObjectMap [
+    rr:predicate wd:Q265158;
+    rr:objectMap [
+      rml:reference "reviews";
+      rr:datatype xsd:int
+      ]
+    ].
